@@ -2,6 +2,9 @@ import load_springleaf
 import numpy as np
 from test_svm import test_svm 
 from sklearn import preprocessing
+from test_logistic_reg import tf_logistic_reg, sk_logistic_reg
+from test_nn import tf_nn
+from test_rf import sk_rf
 import time
 import pandas as pd
 from dateutil.tz import tzutc
@@ -45,15 +48,15 @@ if __name__ == '__main__':
      stopTime = time.time();
      print "Elapsed time (load data): %f"%(stopTime - startTime);
 
-     # svm
- #    sk_rf(train_X, train_Y, test_X, test_Y);
- #    sk_logistic_reg(train_X, train_Y, test_X, test_Y);
-     test_svm(1.0, 'poly', 1.0, 1.0, 3, train_X, train_Y, test_X, test_Y);
+     # # svm
+     # sk_rf(train_X, train_Y, test_X, test_Y);
+     # sk_logistic_reg(train_X, train_Y, test_X, test_Y);
+     # test_svm(1.0, 'linear', 1.0, 0.0, 3, train_X, train_Y, test_X, test_Y);
      # logistic regression
      # tf_logistic_reg(train_X, train_Y, test_X, test_Y);
      
      # neural network
-     # tf_nn(train_X, train_Y, test_X, test_Y);
+     tf_nn(train_X, train_Y, test_X, test_Y);
 
 
      
